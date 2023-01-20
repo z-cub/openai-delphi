@@ -2,10 +2,12 @@ program ChatGPT;
 
 {$APPTYPE CONSOLE}
 
-{$R *.res}
-
 uses
+  {$ifdef FPC}
+  SysUtils,
+  {$else}
   System.SysUtils,
+  {$endif}
   OpenAIClient,
   OpenAIDtos;
 
